@@ -41,9 +41,9 @@ set_bg_image("bg.png")
 # ---------- UI ----------
 st.title("🔐 Cryptarithmetic Puzzle Solver")
 
-first = st.text_input("First Word", "SEND").upper()
-second = st.text_input("Second Word", "MORE").upper()
-result = st.text_input("Result Word", "MONEY").upper()
+first = st.text_input("First Word", placeholder="SEND").upper()
+second = st.text_input("Second Word", placeholder= "MORE").upper()
+result = st.text_input("Result Word", placeholder= "MONEY").upper()
 
 # ---------- CSP Solver ----------
 @st.cache_data
@@ -183,7 +183,7 @@ if st.session_state.solutions:
     attempts = st.session_state.attempts
 
     total = len(solutions)
-    limit = 10
+    limit = 5
 
     if total > limit:
         st.success(f"✅ {total} Solutions Found (Showing top {limit})")
