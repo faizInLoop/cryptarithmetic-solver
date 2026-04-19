@@ -151,7 +151,7 @@ def generate_pdf(first, second, result, solutions):
 
         pdf.cell(200, 8, txt=f"{n1} + {n2} = {n3}", ln=True)
 
-   return bytes(pdf.output(dest="S"))
+    return bytes(pdf.output(dest="S"))
 
 # ---------- Solve Button ----------
 if st.button("🚀 Solve Puzzle"):
